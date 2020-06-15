@@ -3,12 +3,14 @@ import {connect} from 'react-redux';
 import { Panel, PanelHeader, Div, Group, Button } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import logo from '../logo.svg';
+import logoMain from '../image/paw.png';
 import CurrencyRateDashboard from './CurrencyRateDashboard';
 import CurrencyConverter from './CurrencyConverter';
 import * as vkSelectors from '../store/vk/reducer';
 import * as currencyRatesActions from '../store/currency_rates/actions';
 import Footer from './Footer';
 import Logger from './Logger';
+
 
 class MainPanel extends Component {
 
@@ -27,16 +29,25 @@ class MainPanel extends Component {
         return (
             <Panel id={this.props.id}>
                 <PanelHeader>
-                    Лого - Лапы и хвосты
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                        <img width="32" src={logoMain} />&nbsp;&nbsp;&nbsp;Лапы и хвосты
+                    </div>
                 </PanelHeader>
-                <Div style={{textAlign: 'center'}}>
-                    <h1>Здравствуйте, Ник!</h1>
-                    <div style={{ 
-                        marginBottom: 16,
-                        fontSize: '15px',
-                        lineHeight: '20px' 
-                        }}>С приложением 'Лапы и хвосты' следить за здоровьем Вашего питомца легко и просто</div>
-                    <Button>Продолжить</Button>
+                <Div style={{
+                    height: 'calc(100vh - 68px)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center'
+                }}>
+                    <Div style={{textAlign: 'center'}}>
+                        <h1>Здравствуйте, Ник!</h1>
+                        <div style={{ 
+                            marginBottom: 16,
+                            fontSize: '17px',
+                            lineHeight: '20px' 
+                            }}>С приложением 'Лапы и хвосты' следить за здоровьем Вашего питомца легко и просто</div>
+                        <Button size="l">Продолжить</Button>
+                    </Div>
                 </Div>
             </Panel>
         );
