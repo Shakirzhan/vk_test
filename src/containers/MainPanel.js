@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { Panel, PanelHeader, Div, Group } from '@vkontakte/vkui';
+import { Panel, PanelHeader, Div, Group, Button } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import logo from '../logo.svg';
 import CurrencyRateDashboard from './CurrencyRateDashboard';
@@ -29,8 +29,14 @@ class MainPanel extends Component {
                 <PanelHeader>
                     Лого - Лапы и хвосты
                 </PanelHeader>
-                <Div>
-                    <Title>dfs</Title>
+                <Div style={{textAlign: 'center'}}>
+                    <h1>Здравствуйте, Ник!</h1>
+                    <div style={{ 
+                        marginBottom: 16,
+                        fontSize: '15px',
+                        lineHeight: '20px' 
+                        }}>С приложением 'Лапы и хвосты' следить за здоровьем Вашего питомца легко и просто</div>
+                    <Button>Продолжить</Button>
                 </Div>
             </Panel>
         );
