@@ -45,7 +45,7 @@ class MainPanel extends Component {
                             marginBottom: 16,
                             fontSize: '17px',
                             lineHeight: '20px' 
-                            }}>С приложением 'Лапы и хвосты' следить за здоровьем Вашего питомца легко и просто</div>
+                            }}>С приложением "Лапы и хвосты" следить за здоровьем Вашего питомца легко и просто!</div>
                         <Button size="l">Продолжить</Button>
                     </Div>
                 </Div>
